@@ -30,8 +30,8 @@ router.post('/', [
         const registration = new Registration(req.body);
 
         registration.save()
-            .then(() => { res.send('Thank you for your registration!'); })
-            .catch(() => { res.send('Sorry! Something went wrong.'); });
+            .then(() => { res.send('Thank you for your registration!<br><a href="/">Go Back To Entry Form</a>'); })
+            .catch(() => { res.send('Sorry! Something went wrong.<br><a href="/">Go Back To Entry Form</a>'); });
     } else {
             res.render('form', {
                 title: 'Registration form',
